@@ -1,0 +1,74 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (malloc) failed to allocate 32784 bytes. Error detail: Chunk::new
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   This process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#
+#  Out of Memory Error
+#
+# 
+
+V  [jvm.dll+0x8b4b26]
+V  [jvm.dll+0x8b70de]
+V  [jvm.dll+0x8b77c3]
+V  [jvm.dll+0x284346]
+V  [jvm.dll+0xc66ed]
+V  [jvm.dll+0xc6c31]
+V  [jvm.dll+0xd26cd]
+V  [jvm.dll+0x5fea9f]
+V  [jvm.dll+0x255b17]
+V  [jvm.dll+0x255edd]
+V  [jvm.dll+0x24e500]
+V  [jvm.dll+0x24ba42]
+V  [jvm.dll+0x1cb34e]
+V  [jvm.dll+0x25b85d]
+V  [jvm.dll+0x259dea]
+V  [jvm.dll+0x3f857e]
+V  [jvm.dll+0x85f59d]
+V  [jvm.dll+0x6d626d]
+C  [ucrtbase.dll+0x37b0]
+C  [KERNEL32.DLL+0x2e8d7]
+C  [ntdll.dll+0x8c53c]
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x000001f362250ad0, length=63, elements={
+0x000001f37d63e230, 0x000001f31633d8c0, 0x000001f37d6e22a0, 0x000001f37d6e5f90,
+0x000001f37d6e6bf0, 0x000001f37d6ecda0, 0x000001f37d6f6570, 0x000001f37d6fcef0,
+0x000001f37d6fe6f0, 0x000001f358b88fc0, 0x000001f35a215710, 0x000001f35f26ab40,
+0x000001f358bb1b80, 0x000001f35a3806b0, 0x000001f35f028cb0, 0x000001f35f44ba70,
+0x000001f35f5ba300, 0x000001f35f9222a0, 0x000001f35a642ca0, 0x000001f35a643330,
+0x000001f35a642610, 0x000001f35a641f80, 0x000001f35a644d70, 0x000001f360a9ba00,
+0x000001f360a9c090, 0x000001f360a9c720, 0x000001f360a9dad0, 0x000001f360a9a650,
+0x000001f360a9cdb0, 0x000001f360a9b370, 0x000001f360a9ace0, 0x000001f360a9e160,
+0x000001f360aa08c0, 0x000001f360a9f510, 0x000001f360a9fba0, 0x000001f360aa0230,
+0x000001f360a9e7f0, 0x000001f360a9d440, 0x000001f360aa1c70, 0x000001f360aa0f50,
+0x000001f360a9ee80, 0x000001f360aa15e0, 0x000001f360face70, 0x000001f360fac7e0,
+0x000001f360fabac0, 0x000001f360faa080, 0x000001f360faada0, 0x000001f360fad500,
+0x000001f360fadb90, 0x000001f360fae220, 0x000001f360fae8b0, 0x000001f360fb02f0,
+0x000001f360faf5d0, 0x000001f360faef40, 0x000001f360fafc60, 0x000001f360fb0980,
+0x000001f360fa99f0, 0x000001f360fac150, 0x000001f360fb1010, 0x000001f35a644050,
+0x000001f35a6439c0, 0x000001f35a6446e0, 0x000001f36cb44d90
+}
+
+Java Threads: ( => current thread )
+  0x000001f37d63e230 JavaThread "main"                              [_thread_blocked, id=23116, stack(0x000000446c900000,0x000000446ca00000) (1024K)]
+  0x000001f31633d8c0 JavaThread "Reference Handler"          daemon [_thread_blocked, id=23292, stack(0x000000446cd00000,0x000000446ce00000) (1024K)]
+  0x000001f37d6e22a0 JavaThread "Finalizer"                  daemon [_thread_blocked, id=23248, stack(0x000000446ce00000,0x000000446cf00000) (1024K)]
+  0x000001f37d6e5f90 JavaThread "Signal Dispatcher"          daemon [_thread_blocked, id=23256, stack(0x000000446cf00000,0x000000446d000000) (1024K)]
+  0x000001f37d6e6bf0 JavaThread "Attach Listener"            daemon [_thread_blocked, id=23268, stack(0x000000446d000000,0x000000446d100000) (1024K)]
+  0x000001f37d6ecda0 JavaThread "Service Thread"             daemon [_thread_blocked, id=23276, stack(0x000000446d100000,0x000000446d200000) (1024K)]
+  0x000001f37d6f6570 JavaThread "Monitor Deflation Thread"   daemon [_thread_blocked, id=23284, stack(0x000000446d200000,0x000000446d300000) (1024K)]
+=>0x000001f37d6fcef0 JavaThread "C2 CompilerThread0"         daemon [_thread_in_native, id=23240, stack(0x000000446d300000,0x000000446d400000) (1024K)]
+  0x000001f37d6fe6f0 JavaThread "C1 CompilerThread0"         daemon [_thread_blocked, id=23236, stack(0x000000446d400000,0x000000446d500000) (1024K)]
+  0x000001f358b88fc0 JavaThread "Common-Cleaner"             daemon [_thread_blocked, id=23300, stack(0x000000446d800000,0x000000446d900000) (1024K)]
+  0x000001f35a215710         daemon []
+   ]
